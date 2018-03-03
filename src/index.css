@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Work+Sans');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.fade-enter {
+  transform: translateY(-100%);
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  transform: translateY(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.fade-exit {
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.fade-exit.fade-exit-active {
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.slide-enter {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.slide-exit {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.slide-exit.slide-exit-active {
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+a.selected {
+  font-weight: bold;
+}
+
+.sidenav div{
+  list-style: none;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  letter-spacing: 5px;
+
+  
+  border-right: 3px solid #fff;
+  font-weight: bold;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: grid;
+  align-content: center;
+}
+.sidenav div a{
+  writing-mode: vertical-rl;
+  text-decoration: none;
+  color: #aaa;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.sidenav div.active a {
+  color: #321dd3;
+}
+
+.sidenav div.active{
+  border-right: 3px solid #321dd3;
+  
+}
