@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { blue, flesh, gray, red } from './variables';
 
 export const Logo = styled.div`
     grid-column: 1 / 2;
@@ -6,18 +7,126 @@ export const Logo = styled.div`
     z-index: 1;
     text-align: center;
     padding-top: 6vh;
+    height: 70px;
     img {
         width: 80%;
         margin: auto;
     }
 `;
 
-export const PageWrapper = styled.div`
+export const HomeWrapper = styled.div`
     height: 100vh;
-    background-color: #eee;
+    background-color: ${flesh};
     display: grid;
     grid-template-columns: 16vw 1fr 1fr 1fr 6vh 6vh 1fr 1fr 6vh 6vh 6vh;
     grid-template-rows: 6vh 6vh 6vh 6vh 1fr 1fr 1fr 6vh 6vh 6vh 6vh;
+    color: ${blue};
+    .block {
+        background-color: ${flesh};
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+        z-index: 1;
+    }
+    .worklink {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    color: ${blue};
+    z-index: 8;
+    text-decoration: none;
+        span {
+            font-size: 1.2em;
+            text-decoration: none;
+            border-bottom: solid white 2px;     
+            color: ${blue};
+        }
+    }
+`;
+
+export const Portfolio = styled.div`
+    grid-column: 2 / 6;
+    grid-row: 5 / 6;
+    margin:0;
+    font-size: 1.2em;
+    color: ${blue};
+    align-self: end;
+    padding-bottom: 20px;
+`;
+export const H1 = styled.h1`
+    grid-column: 2 / -1;
+    grid-row: 6 / 9;
+    margin:0;
+    font-size: 3em;
+    text-shadow: 3px 3px white;
+    z-index: 5;
+`;
+export const Categories = styled.div`
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    margin:0;
+    font-size: 3em;
+    text-align: right;
+    right:0;
+    padding-right: 0px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    @keyframes animateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; transform: translateY(-100%); }
+    5% { opacity: 1; transform: translateY(0);}
+    17% { opacity: 1; transform: translateY(0); }
+    20% { opacity: 0; transform: translateY(100%); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+    }
+    span {
+        opacity: 0;
+        right: 10px;
+        overflow: hidden;
+        position: absolute;
+        animation: animateWord 8s linear infinite 0s;
+        &:nth-child(1){
+        animation-delay: 0s; 
+        }
+        &:nth-child(2){
+        animation-delay: 2s; 
+        }
+        &:nth-child(3){
+        animation-delay: 4s; 
+        }
+        &:nth-child(4){
+        animation-delay: 6s; 
+        }
+    }
+
+`;
+
+export const PageWrapper = styled.div`
+    height: 100vh;
+    background-color: ${flesh};
+    display: grid;
+    grid-template-columns: 16vw 1fr 1fr 1fr 6vh 6vh 1fr 1fr 6vh 6vh 6vh;
+    grid-template-rows: 6vh 6vh 6vh 6vh 1fr 1fr 1fr 6vh 6vh 6vh 6vh;
+    .clients{
+        grid-column: 2 / 5;
+        grid-row: 4 / 6;
+        color: white;
+        padding: 1em;
+        width: calc(50% - 2em);
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+    }
+    .contact{
+        grid-column: 2 / 5;
+        grid-row: 4 / 6;
+        color: white;
+        padding: 1em;
+        width: calc(50% - 2em);
+    }
     .logo {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -40,7 +149,7 @@ export const PageWrapper = styled.div`
     }
 
     .img {
-        background-color: #222;
+        background-color: ${blue};
         background-size: cover;
         background-position: center;
         grid-column: 2 / 11;
@@ -53,7 +162,7 @@ export const PageWrapper = styled.div`
 
     }
     .img_mask {
-        background-color: #222;
+        background-color: ${flesh};
         grid-column: 2 / 11;
         grid-row: 2 / 11;
         z-index: 2;
@@ -93,6 +202,7 @@ export const PageWrapper = styled.div`
         text-transform: uppercase;
         letter-spacing: 3px;
         font-size: 0.7em;
+        font-weight: 600;
         span{
             display: block;
             transform: rotate(-90deg);
@@ -259,6 +369,25 @@ export const PageWrapper = styled.div`
         li.active {
             color: #222;
             border-right: 3px solid #222;
+        }
+    }
+`;
+
+export const ProjectWrapper = styled.div`
+    height: 80vh;
+    overflow-y: scroll;
+    padding: 10vh;
+    .project-wrapper{
+        background: white;
+        padding: 5vh;
+        h3{
+            margin: 0;
+        }
+        img{
+            max-width: 100%;
+        }
+        video{
+            max-width: 100%;
         }
     }
 `;

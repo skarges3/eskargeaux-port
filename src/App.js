@@ -12,6 +12,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Work from './components/Work'
 import Project1 from './components/Project1'
+import Project2 from './components/Project2'
 import { PageWrapper, Logo } from './theme/Basics'
 
 const NavLink = ({children, to, exact}) => {
@@ -38,7 +39,7 @@ class App extends Component {
             <Route exact path="/" render={() => (
               <Redirect to="/home"/>
             )}/>
-            <Logo><img src={require('./assets/logo.svg')}/></Logo>
+            <Logo><Link exact to="/home" ><img src={require('./assets/logo.svg')}/></Link></Logo>
             <ul className="sidenav" style={styles.nav}>
               <NavLink exact to="/home">Home</NavLink>
               <NavLink exact to="/work">Work</NavLink>
@@ -60,6 +61,7 @@ class App extends Component {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/contact" component={Contact} />
                     <Route exact path="/work/generousgiving" component={Project1} />
+                    <Route exact path="/work/widerseas" component={Project2} />
                     {/* <Route render={() => <div>Not Found</div>} /> */}
                   </Switch>
                   </div>
@@ -83,7 +85,8 @@ styles.fill = {
 
 styles.content = {
   gridArea: '1 / 1 / 2 / 3',
-  height: '100vh'
+  height: '100vh',
+  background: '#efd9ce'
 }
 
 styles.nav = {

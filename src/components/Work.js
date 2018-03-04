@@ -17,12 +17,12 @@ import './slider-animations.css'
 const content = [
 	{
 		title: 'Generous Giving',
-		description:
-		'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
-		button: 'Read More',
+		description: 'I’ve worked for a small non-profit for the past four years ― three of which have been as their sole employee working on design, brand, and web development.',
+		button: 'Learn more',
 		image: 'https://static1.squarespace.com/static/5869635e29687f6648fff881/5869717b1b631bf4190efd11/586ae010d2b85773857a2f7b/1486166025163/thumbnails-18.jpg?format=1500w',
 		user: 'Luan Gjokaj',
-		userProfile: 'https://i.imgur.com/JSW6mEk.png'
+		userProfile: 'https://i.imgur.com/JSW6mEk.png',
+		link: '/work/generousgiving'
 	},
 	{
 		title: 'Wider Seas',
@@ -31,7 +31,8 @@ const content = [
 		button: 'Discover',
 		image: 'https://static1.squarespace.com/static/5869635e29687f6648fff881/586ae40c5016e1c664554c4a/586ae42e59cc688787ccba03/1483400270837/thumbnails-09.jpg?format=1500w',
 		user: 'Erich Behrens',
-		userProfile: 'https://i.imgur.com/0Clfnu7.png'
+		userProfile: 'https://i.imgur.com/0Clfnu7.png',
+		link: '/work/widerseas'
 	},
 	{
 		title: 'Third',
@@ -40,7 +41,8 @@ const content = [
 		button: 'Buy now',
 		image: 'https://i.imgur.com/DvmN8Hx.jpg',
 		user: 'Bruno Vizovskyy',
-		userProfile: 'https://i.imgur.com/4KeKvtH.png'
+		userProfile: 'https://i.imgur.com/4KeKvtH.png',
+		link: '/work/third'
 	}
 ];
 
@@ -62,12 +64,13 @@ class Work extends Component {
                     <div class="gridlines4"></div>
                     <div className="img-mask"></div>
                     
-					<div className="page-title"><h2>MY WORK</h2></div>
+					<div className="page-title"><h2><span>&mdash;&mdash;</span> WORK</h2></div>
 					<div className="title-card"></div>
 					<div className="title-desc">
                     <h1>{item.title}</h1>
                     <p>{item.description}</p>
-                    <button><a href="/work/generousgiving">{item.button}</a></button>
+					<Link className="button" exact to={item.link}>{item.button}</Link>
+                    
                     </div>
                     <div className="counter"><span>{index + 1}</span></div>
 					
