@@ -39,11 +39,11 @@ class App extends Component {
             <Route exact path="/" render={() => (
               <Redirect to="/home"/>
             )}/>
-            <Logo><Link exact to="/home" ><img src={require('./assets/logo.svg')}/></Link></Logo>
+            <Logo><Link exact to="/home" ><img className="second" src={require('./assets/logo.svg')}/><img className="first" src={require('./assets/logo.svg')}/></Link></Logo>
             <ul className="sidenav" style={styles.nav}>
               <NavLink exact to="/home">Home</NavLink>
               <NavLink exact to="/work">Work</NavLink>
-              <NavLink exact to="/about">About</NavLink>
+  
               <NavLink exact to="/contact">Contact</NavLink>
               
             </ul>
@@ -53,7 +53,7 @@ class App extends Component {
                 <CSSTransition
                   key={location.key}
                   classNames="fade"
-                  timeout={500}
+                  timeout={1000}
                 ><div>
                   <Switch location={location}>
                     <Route exact path="/home" component={Home} />

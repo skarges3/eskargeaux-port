@@ -1,16 +1,25 @@
 import styled from 'styled-components'
-import { blue, flesh, gray, red } from './variables';
+import { blue, flesh, darkflesh, gray, red } from './variables';
 
 export const Logo = styled.div`
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     padding-top: 6vh;
     height: 70px;
     img {
         width: 80%;
         margin: auto;
+    }
+    img.first {
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+    img.second {
+        transform: translateY(80%);
+        filter: brightness(8);
+        z-index: -1;
     }
 `;
 
@@ -113,6 +122,8 @@ export const PageWrapper = styled.div`
         color: white;
         padding: 1em;
         width: calc(50% - 2em);
+        z-index: 3;
+        font-size: 1.2em;
         ul{
             padding: 0;
         }
@@ -122,11 +133,29 @@ export const PageWrapper = styled.div`
     }
     .contact{
         grid-column: 2 / 5;
-        grid-row: 4 / 6;
+        grid-row: 4 / 8;
         color: white;
+        background: #E0C6BA;
         padding: 1em;
         width: calc(50% - 2em);
+        height: 100%;
+        z-index: 3;
+        font-size: 1.2em;
+        text-shadow: 1px 1px #E0C6BA;
+        span{
+            font-size: 3em;
+        }
     }
+    .darker {
+        grid-column: 8 / 11;
+        grid-row: 1 / 4;
+        background: #E0C6BA;
+    }  
+    .darker2 {
+        grid-column: 5 / 8;
+        grid-row: 9 / 12;
+        background: #E0C6BA;
+    }  
     .logo {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -374,14 +403,53 @@ export const PageWrapper = styled.div`
 `;
 
 export const ProjectWrapper = styled.div`
-    height: 80vh;
-    overflow-y: scroll;
-    padding: 10vh;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 0vh 6vh 0vh 16vw;
+        margin-top: 0;
     .project-wrapper{
-        background: white;
-        padding: 5vh;
+        display: grid;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1vw;
+        grid-auto-flow: dense;
+        .intro{
+            grid-column: span 4;
+        }
+        .card {
+            background: white;
+            padding: 4vh;
+            box-shadow: 0px 1px 8px 2px #E0C6BA;
+            
+            &.tran{
+                background: transparent;
+                box-shadow: none;
+            }
+            &.span-1{
+                grid-column: span 1;
+            }
+            &.span-2{
+                grid-column: span 2;
+            }
+            &.span-3{
+                grid-column: span 3;
+            }
+            &.span-4{
+                grid-column: span 4;
+            }
+        }
+        
         h3{
             margin: 0;
+            color: #E0C6BA;
+        }
+        h2{
+            margin: 0;
+            font-weight: 300;
+            font-size: 2em;
+            color: white;
+            
         }
         img{
             max-width: 100%;

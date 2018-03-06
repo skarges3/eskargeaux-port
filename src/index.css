@@ -27,14 +27,13 @@ body {
 }
 
 .fade-enter .project-wrapper{
-  transform: translateX(100%) translateY(0);
+  transform: translateX(100%);
   z-index: 1;
-  transition: transform 250ms ease-in-out;
 }
 .fade-enter.fade-enter-active .project-wrapper{
   transform: translateX(0) translateY(0);
   z-index: 1;
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out 450ms;
 }
 
 .fade-exit .project-wrapper{
