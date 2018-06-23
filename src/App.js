@@ -13,6 +13,8 @@ import Contact from './components/Contact'
 import Work from './components/Work'
 import Project1 from './components/Project1'
 import Project2 from './components/Project2'
+import Project3 from './components/Project3'
+import Project4 from './components/Project4'
 import { PageWrapper, Logo } from './theme/Basics'
 
 const NavLink = ({children, to, exact}) => {
@@ -61,7 +63,9 @@ class App extends Component {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/contact" component={Contact} />
                     <Route exact path="/work/generousgiving" component={Project1} />
-                    <Route exact path="/work/widerseas" component={Project2} />
+                    <Route exact path="/work/jog" component={Project2} />
+                    <Route exact path="/work/plowshares" component={Project3} />
+                    <Route exact path="/work/plana" component={Project4} />
                     {/* <Route render={() => <div>Not Found</div>} /> */}
                   </Switch>
                   </div>

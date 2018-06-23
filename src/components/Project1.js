@@ -15,8 +15,8 @@ class Project1 extends Component {
             <ProjectWrapper>
             <div className="project-wrapper">
             <div className="intro">
-            <h3>Branding | Front-end Development | Animation | Print Design</h3>
-            <h2>Generous Giving</h2>
+            <h3>Branding | Logo Design</h3>
+            <h2>Generous Giving Branding</h2>
             </div>
             <div className="card span-2">
             <p>Generous Giving is a non-profit seeking to inspire people whom have been given much, to live simply and give generously.</p>
@@ -44,6 +44,11 @@ class Project1 extends Component {
             <div className="card span-2">
             <p>Brand guidelines excerpt: patterns inspired by the logo for use in print and digital material.</p>
             <img src={require('../assets/projects/gg/patterns.png')}/>
+            </div>
+
+            <div className="card span-3">
+            <p>Print design for the event booklet.</p>
+            <img src={require('../assets/projects/gg/thumbnails-14.jpg')}/>
             </div>
 
 

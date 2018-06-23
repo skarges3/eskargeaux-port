@@ -7,8 +7,6 @@ import {
   Redirect
 } from 'react-router-dom'
 import { PageWrapper, Logo } from '../theme/Basics'
-import Project1 from './Project1'
-import Project2 from './Project2'
 import Slider from 'react-animated-slider'
 import 'react-animated-slider/build/horizontal.css'
 import './styles.css'
@@ -16,33 +14,43 @@ import './slider-animations.css'
 
 const content = [
 	{
-		title: 'Generous Giving',
+		title: 'Generous Giving Branding',
 		description: 'I’ve worked for a small non-profit for the past four years ― three of which have been as their sole employee working on design, brand, and web development.',
 		button: 'Learn more',
-		image: 'https://static1.squarespace.com/static/5869635e29687f6648fff881/5869717b1b631bf4190efd11/586ae010d2b85773857a2f7b/1486166025163/thumbnails-18.jpg?format=1500w',
+		image: require('../assets/projects/gg/thumb-03.png'),
 		user: 'Luan Gjokaj',
 		userProfile: 'https://i.imgur.com/JSW6mEk.png',
 		link: '/work/generousgiving'
 	},
 	{
-		title: 'Wider Seas',
+		title: 'Website and Invitation system',
 		description:
-		'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
-		button: 'Discover',
-		image: 'https://static1.squarespace.com/static/5869635e29687f6648fff881/586ae40c5016e1c664554c4a/586ae42e59cc688787ccba03/1483400270837/thumbnails-09.jpg?format=1500w',
+		'Generous Giving uses Salesforce to integrate their CRM, website, and event registrations. I redesigned the front-end of the site and helped implement an invitation system with user input and animated evites.',
+		button: 'check it out',
+		image:  require('../assets/projects/gg/beach-sand-water.jpeg'),
 		user: 'Erich Behrens',
 		userProfile: 'https://i.imgur.com/0Clfnu7.png',
-		link: '/work/widerseas'
+		link: '/work/jog'
 	},
 	{
-		title: 'Third',
+		title: 'Plowshares',
 		description:
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
-		button: 'Buy now',
-		image: 'https://i.imgur.com/DvmN8Hx.jpg',
+		'A simply good coffee bag for simply good coffee.',
+		button: 'See it here',
+		image: require('../assets/projects/plowshares/thumb-04.png'),
 		user: 'Bruno Vizovskyy',
 		userProfile: 'https://i.imgur.com/4KeKvtH.png',
-		link: '/work/third'
+		link: '/work/plowshares'
+	},
+	{
+		title: 'Plan A Wealth Management',
+		description:
+		'A wealth management firm in Lincoln, NE.',
+		button: 'View the Brand',
+		image: require('../assets/projects/plana/thumb-02.png'),
+		user: 'Bruno Vizovskyy',
+		userProfile: 'https://i.imgur.com/4KeKvtH.png',
+		link: '/work/plana'
 	}
 ];
 
@@ -57,7 +65,7 @@ class Work extends Component {
 					className="slider-content"
 					
 				>   
-                    <div className="img" style={{ background: `url('${item.image}')` }}></div>
+                    <div className="img" style={{ backgroundImage: `url('${item.image}')` }}></div>
                     <div class="gridlines"><div></div></div>
                     <div class="gridlines2"></div>
                     <div class="gridlines3"><div></div></div>

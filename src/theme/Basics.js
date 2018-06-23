@@ -17,7 +17,7 @@ export const Logo = styled.div`
         z-index: -1;
     }
     img.second {
-        transform: translateY(80%);
+        transform: translateY(80%) translateX(-1%);
         filter: brightness(8);
         z-index: -1;
     }
@@ -408,6 +408,11 @@ export const ProjectWrapper = styled.div`
         padding: 0vh 6vh 0vh 16vw;
         margin-top: 0;
     .project-wrapper{
+        .projectlink img:hover{
+            border: 3px solid ${blue};
+            transition: all 250ms ease;
+            box-sizing: border-box;
+        }
         display: grid;
         padding-top: 10vh;
         padding-bottom: 10vh;
